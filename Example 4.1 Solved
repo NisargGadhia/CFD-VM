@@ -1,0 +1,19 @@
+Ta=input("Enter the temperature at end 1:");
+Tb=input("Enter the temperature at end 2:");
+l=input("Enter the length of the rod:");
+k=input("Enter the thermal conductivity:");
+A=input("Enter the area of the rod:");
+div=input("Enter the number of divisions you want to divide:");
+dx=l/div;
+C1=(Tb-Ta)/l;
+C2=Ta;
+function temp= T(x)
+    temp = (C1*x)+C2;
+endfunction
+x = 0:dx:l;
+temperature = T(x);
+plot(x,temperature);
+xlabel("Length of the Rod(m)");
+ylabel("Temperature(degree C)");
+title('Temperature Distribution in the Rod');
+xtitle('One-Dimensional Steady-State Heat Conduction');
